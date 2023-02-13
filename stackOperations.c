@@ -46,9 +46,6 @@ void push()
     }
 }
 
-
-
-
 void pop(){
  if(top == -1) {
     printf("STACK UNDERFLOW");

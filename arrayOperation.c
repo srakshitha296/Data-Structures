@@ -32,6 +32,7 @@ void insert_pos(){
     for(i=n-1; i>=position-1; i-- ) 
         array[i+1] = array[i];
         array[position - 1] = element;
+        n+=1;
 }
 }
 

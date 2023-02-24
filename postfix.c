@@ -56,6 +56,7 @@ void push(float x) {
     if(stack1.top== MAX -1)
     {
         printf("\nStack overflow");
+        return;
     }else{
 stack1.top++;
 stack1.stack[stack1.top] = x;
@@ -66,7 +67,7 @@ stack1.stack[stack1.top] = x;
 //defining pop function
 float pop() {
     if(stack1.top == -1){
-        printf("Stack underflow");
+        printf("Stack underflow\n");
      return 0;
     }else {
         stack1.top--;

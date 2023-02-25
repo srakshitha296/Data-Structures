@@ -15,7 +15,7 @@ void insert() {
 void display() {
     printf("The elements of the array are \n");
     for(i=0; i<=n-1; i++) {
-        printf("%d\t", array[i]);
+        printf("%d is present at index %d\n", array[i],i);
     }
 }
 
@@ -48,7 +48,7 @@ void delete_pos(){
     for(i=position-1; i<=n-1;i++ ) {
        array[i]=array[i+1];
     }
-    }
+    } n-=1;
 }
 
 void main() {

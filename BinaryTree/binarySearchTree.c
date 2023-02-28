@@ -13,6 +13,7 @@ NODE getnode() {
     return x;
 }
 
+//Inserting a NOde to the tree.
 NODE insert_node(NODE root, int item) {
     NODE temp, cur, prev;
     temp = getnode();
@@ -36,6 +37,8 @@ NODE insert_node(NODE root, int item) {
             return root;
     }
 }
+
+//Pre Order Traversal
 void pre(NODE PRE) {
     if(PRE != NULL) {
     printf("%d\t", PRE->info);
@@ -44,6 +47,7 @@ void pre(NODE PRE) {
     }
 }
 
+//In Order Traversal
 void in(NODE IN) {
      if(IN != NULL) {
     in(IN -> llink);
@@ -52,6 +56,7 @@ void in(NODE IN) {
      }
 }
 
+//Poat Order Traversal
 void post(NODE POST) {
      if(POST != NULL) {
     post(POST -> llink);
@@ -60,6 +65,7 @@ void post(NODE POST) {
      }
 }
 
+//Function to traverse the tree in pre, in and post order
 void Traversal(NODE root) {
     NODE PRE=root, POST=root, IN=root;
     if(root == NULL) {
@@ -74,6 +80,7 @@ return;
     post(POST);
 }
 
+//Function search a node in the tree
 NODE Search(NODE root) {
     int flag=0, item;
     NODE cur = root;
@@ -104,7 +111,7 @@ NODE Search(NODE root) {
     }
 }
 
-
+//Main function
 void main() {
     int choice, n, item;
     NODE root = NULL;

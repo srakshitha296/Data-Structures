@@ -8,11 +8,13 @@ struct node {
 };
 typedef struct node *NODE;
 
+//function to create a new node and return its address to the calling function.
 NODE getnode() {
     NODE x= (NODE)malloc(sizeof(struct node));
     return x;
 }
 
+//function to connect the created node to the main node.
 NODE insert_node(NODE root, int item) {
     NODE temp, cur, prev;
     temp = getnode();
@@ -36,6 +38,8 @@ NODE insert_node(NODE root, int item) {
             return root;
     }
 }
+
+//function to traverse the binary search tree in pre order fashion.
 void pre(NODE PRE) {
     if(PRE != NULL) {
     printf("%d\t", PRE->info);
@@ -44,6 +48,7 @@ void pre(NODE PRE) {
     }
 }
 
+//function to traverse the binary search tree in in order fashion.
 void in(NODE IN) {
      if(IN != NULL) {
     in(IN -> llink);
@@ -52,6 +57,7 @@ void in(NODE IN) {
      }
 }
 
+//function to traverse the binary search tree in post order fashion.
 void post(NODE POST) {
      if(POST != NULL) {
     post(POST -> llink);
@@ -60,6 +66,7 @@ void post(NODE POST) {
      }
 }
 
+//function to call pre, in and post order traversal function.
 void Traversal(NODE root) {
     NODE PRE=root, POST=root, IN=root;
     if(root == NULL) {
@@ -74,6 +81,7 @@ return;
     post(POST);
 }
 
+//function to search a given node in the tree.
 NODE Search(NODE root) {
     int flag=0, item;
     NODE cur = root;
@@ -104,7 +112,7 @@ NODE Search(NODE root) {
     }
 }
 
-
+//main function 
 void main() {
     int choice, n, item;
     NODE root = NULL;

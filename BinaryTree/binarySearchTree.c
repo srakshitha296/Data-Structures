@@ -14,7 +14,7 @@ NODE getnode() {
     return x;
 }
 
-//function to connect the created node to the main node.
+//Inserting a NOde to the tree.
 NODE insert_node(NODE root, int item) {
     NODE temp, cur, prev;
     temp = getnode();
